@@ -1,0 +1,46 @@
+{{>header}}
+<title>CRUD | Add</title>
+{{>navbar}}
+<div class="container-fluid my-3 mid-section">
+    <h5 class="background text-center text-light p-2">Add Employee Record</h5>
+    <form action="/add" method="post">
+        <div class="mb-3">
+            <label>Name<span class="text-danger">*</span></label>
+            <input type="text" name="name" required placeholder="Full Name" class="form-control">
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Email<span class="text-danger">*</span></label>
+                <input type="email" name="email" required placeholder="Email Address" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Phone<span class="text-danger">*</span></label>
+                <input type="text" name="phone" required placeholder="Phone Number" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Designation<span class="text-danger">*</span></label>
+                <input type="text" name="designation" required placeholder="Designation" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Salary<span class="text-danger">*</span></label>
+                <input type="number" name="salary" required placeholder="Salary" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>City</label>
+                <input type="text" name="city" placeholder="City Name" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>State</label>
+                <input type="text" name="state" placeholder="State Name " class="form-control">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn background text-light w-100">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+{{>footer}}

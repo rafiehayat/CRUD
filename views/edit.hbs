@@ -1,0 +1,46 @@
+{{>header}}
+<title>CRUD | EDIT</title>
+{{>navbar}}
+<div class="container-fluid my-3 mid-section">
+    <h5 class="background text-center text-light p-2">Update Employee Record</h5>
+    <form action="/edit/{{data._id}}" method="post">
+        <div class="mb-3">
+            <label>Name<span class="text-danger">*</span></label>
+            <input type="text" name="name" required placeholder="Full Name" class="form-control" value="{{data.name}}">
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Email<span class="text-danger">*</span></label>
+                <input type="email" name="email" required placeholder="Email Address" class="form-control" value="{{data.email}}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Phone<span class="text-danger">*</span></label>
+                <input type="text" name="phone" required placeholder="Phone Number" class="form-control" value="{{data.phone}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Designation<span class="text-danger">*</span></label>
+                <input type="text" name="designation" required placeholder="Designation" class="form-control" value="{{data.designation}}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Salary<span class="text-danger">*</span></label>
+                <input type="number" name="salary" required placeholder="Salary" class="form-control" value="{{data.salary}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>City</label>
+                <input type="text" name="city" placeholder="City Name" class="form-control" value="{{data.city}}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>State</label>
+                <input type="text" name="state" placeholder="State Name " class="form-control" value="{{data.state}}">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn background text-light w-100">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
+{{>footer}}
